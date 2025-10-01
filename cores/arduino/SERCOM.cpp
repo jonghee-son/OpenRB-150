@@ -177,7 +177,6 @@ uint8_t SERCOM::readDataUART()
 
 int SERCOM::writeDataUART(uint8_t data)
 {
-  PORT->Group[PORTA].OUTSET.reg = 1 << 23;
   // Wait for data register to be empty
   while(!isDataRegisterEmptyUART());
 
@@ -186,7 +185,6 @@ int SERCOM::writeDataUART(uint8_t data)
 
   // indicate it's ok to wait for TXC flag when flushing
   onFlushWaitUartTXC = true;
-  PORT->Group[PORTA].OUTCLR.reg = 1 << 23;
 
   return 1;
 }
