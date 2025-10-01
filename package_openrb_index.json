@@ -93,6 +93,49 @@
               "version": "1.2.0"
             }
           ]
+        },
+        {
+          "name": "OpenRB-150",
+          "architecture": "samd",
+          "version": "0.2.2",
+          "category": "Contributed",
+          "url": "https://github.com/jonghee-son/OpenRB-150/releases/download/0.2.2/OpenRB-150.zip",
+          "archiveFileName": "OpenRB-150.zip",
+          "checksum": "sha256:139a112e373070f98500bb7f34600cdcdf4b923129097fd473aa706571ca9892",
+          "size": "797374",
+          "boards": [
+            {
+              "name": "OpenRB-150"
+            }
+          ],
+          "toolsDependencies":
+          [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "7-2017q4"
+            },
+            {
+              "packager": "arduino",
+              "name": "bossac",
+              "version": "1.7.0-arduino3"
+            },
+            {
+              "packager": "arduino",
+              "name": "openocd",
+              "version": "0.10.0-arduino9"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS",
+              "version": "4.5.0"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS-Atmel",
+              "version": "1.2.0"
+            }
+          ]
         }
       ],
       "tools":
