@@ -138,7 +138,7 @@ void OLLO::begin(int devNum, OlloDeviceIndex device_index){ //MAGNETIC SENSOR, B
 		pinMode(PORT1_SIG2, OUTPUT); //SIG2
 		if(device_index == IR_SENSOR ){
 			digitalWrite(PORT1_SIG1,LOW); //SIG1 set to LOW
-			digitalWrite(PORT1_SIG2,LOW); //SIG2 set to LOW
+			digitalWrite(PORT1_SIG2,HIGH); //SIG2 set to HIGH
 		}
 		break;
 	case 2:
@@ -154,7 +154,7 @@ void OLLO::begin(int devNum, OlloDeviceIndex device_index){ //MAGNETIC SENSOR, B
 		pinMode(PORT2_SIG2, OUTPUT); //SIG2
 		if(device_index == IR_SENSOR ){
 			digitalWrite(PORT2_SIG1,LOW); //set to LOW
-			digitalWrite(PORT2_SIG2,LOW); //set to LOW
+			digitalWrite(PORT2_SIG2,HIGH); //set to HIGH
 		}
 		break;
 	case 3:
@@ -170,7 +170,7 @@ void OLLO::begin(int devNum, OlloDeviceIndex device_index){ //MAGNETIC SENSOR, B
 		pinMode(PORT3_SIG2, OUTPUT); //SIG2
 		if(device_index == IR_SENSOR ){
 			digitalWrite(PORT3_SIG1,LOW); //set SIG1 to LOW
-			digitalWrite(PORT3_SIG2,LOW); //set SIG2 to LOW
+			digitalWrite(PORT3_SIG2,HIGH); //set SIG2 to HIGH
 		}
 		break;
 	case 4:
@@ -186,7 +186,7 @@ void OLLO::begin(int devNum, OlloDeviceIndex device_index){ //MAGNETIC SENSOR, B
 		pinMode(PORT4_SIG2, OUTPUT); //SIG2
 		if(device_index == IR_SENSOR ){
 			digitalWrite(PORT4_SIG1,LOW); //set SIG1 to LOW
-			digitalWrite(PORT4_SIG2,LOW); //set SIG2 to LOW
+			digitalWrite(PORT4_SIG2,HIGH); //set SIG2 to HIGH
 		}
 		break;
 	default:
@@ -263,10 +263,10 @@ int OLLO::read(int devNum, OlloDeviceIndex device_index){ // IR SENSOR, Button, 
 	switch(devNum){
 	case 1:
 		if(device_index == IR_SENSOR){
-			digitalWrite(PORT1_SIG2, HIGH);
+			digitalWrite(PORT1_SIG2, LOW);
 			delayMicroseconds(15);
 			adcValue = analogRead(PORT1_ADC);
-			digitalWrite(PORT1_SIG2, LOW);
+			digitalWrite(PORT1_SIG2, HIGH);
 			return adcValue;
 		}else if(device_index == MAGNETIC_SENSOR || device_index == TOUCH_SENSOR  || device_index == PIR_SENSOR){
 			return digitalRead(PORT1_ADC);
@@ -297,10 +297,10 @@ int OLLO::read(int devNum, OlloDeviceIndex device_index){ // IR SENSOR, Button, 
 		break;
 	case 2:
 		if(device_index == IR_SENSOR){
-			digitalWrite(PORT2_SIG2, HIGH);//digitalWrite(PORT1_SIG2, HIGH); -> digitalWrite(PORT2_SIG2, HIGH); 140324
+			digitalWrite(PORT2_SIG2, LOW);//digitalWrite(PORT1_SIG2, HIGH); -> digitalWrite(PORT2_SIG2, HIGH); 140324
 			delayMicroseconds(15);
 			adcValue = analogRead(PORT2_ADC);//adcValue = analogRead(PORT1_ADC); -> adcValue = analogRead(PORT2_ADC); 140324
-			digitalWrite(PORT2_SIG2, LOW);//digitalWrite(PORT1_SIG2, LOW); -> digitalWrite(PORT2_SIG2, LOW);
+			digitalWrite(PORT2_SIG2, HIGH);//digitalWrite(PORT1_SIG2, LOW); -> digitalWrite(PORT2_SIG2, LOW);
 			return adcValue;
 		}else if(device_index == MAGNETIC_SENSOR || device_index == TOUCH_SENSOR || device_index == PIR_SENSOR){
 			return digitalRead(PORT2_ADC);
@@ -366,10 +366,10 @@ int OLLO::read(int devNum, OlloDeviceIndex device_index){ // IR SENSOR, Button, 
 		break;
 	case 3:
 		if(device_index == IR_SENSOR){
-			digitalWrite(PORT3_SIG2, HIGH);////digitalWrite(PORT1_SIG2, HIGH); -> digitalWrite(PORT3_SIG2, HIGH); 140324
+			digitalWrite(PORT3_SIG2, LOW);////digitalWrite(PORT1_SIG2, HIGH); -> digitalWrite(PORT3_SIG2, HIGH); 140324
 			delayMicroseconds(15);
 			adcValue = analogRead(PORT3_ADC);//adcValue = analogRead(PORT1_ADC); -> adcValue = analogRead(PORT3_ADC); 140324
-			digitalWrite(PORT3_SIG2, LOW);//digitalWrite(PORT1_SIG2, LOW); -> digitalWrite(PORT3_SIG2, LOW);
+			digitalWrite(PORT3_SIG2, HIGH);//digitalWrite(PORT1_SIG2, LOW); -> digitalWrite(PORT3_SIG2, LOW);
 			return adcValue;
 		}else if(device_index == MAGNETIC_SENSOR || device_index == TOUCH_SENSOR || device_index == PIR_SENSOR){
 			return digitalRead(PORT3_ADC);
@@ -434,10 +434,10 @@ int OLLO::read(int devNum, OlloDeviceIndex device_index){ // IR SENSOR, Button, 
 		break;
 	case 4:
 		if(device_index == IR_SENSOR){
-			digitalWrite(PORT4_SIG2, HIGH); //digitalWrite(PORT1_SIG2, HIGH); -> digitalWrite(PORT4_SIG2, HIGH); 140324
+			digitalWrite(PORT4_SIG2, LOW); //digitalWrite(PORT1_SIG2, HIGH); -> digitalWrite(PORT4_SIG2, HIGH); 140324
 			delayMicroseconds(15);
 			adcValue = analogRead(PORT4_ADC); //adcValue = analogRead(PORT1_ADC); -> adcValue = analogRead(PORT4_ADC); 140324
-			digitalWrite(PORT4_SIG2, LOW);//digitalWrite(PORT1_SIG2, LOW); -> digitalWrite(PORT4_SIG2, LOW);
+			digitalWrite(PORT4_SIG2, HIGH);//digitalWrite(PORT1_SIG2, LOW); -> digitalWrite(PORT4_SIG2, LOW);
 			return adcValue;
 		}else if(device_index == MAGNETIC_SENSOR || device_index == TOUCH_SENSOR || device_index == PIR_SENSOR ){
 			return digitalRead(PORT4_ADC);
