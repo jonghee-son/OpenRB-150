@@ -99,10 +99,10 @@
           "architecture": "samd",
           "version": "0.2.2",
           "category": "Contributed",
-          "url": "https://github.com/jonghee-son/OpenRB-150/releases/download/0.2.2/OpenRB-150.zip",
+          "url": "https://github.com/jonghee-son/OpenRB-150/releases/download/0.2.2-test/OpenRB-150.zip",
           "archiveFileName": "OpenRB-150.zip",
-          "checksum": "SHA-256:ee203919cc2fef900c08f1c89aa474564e500a23b75878862f440ed9a76a6bb6",
-          "size": "803916",
+          "checksum": "SHA-256:d62dfff34db078ac921118911ecac97707f3249e9600bb4f52e5f5db185f14e9",
+          "size": "803919",
           "boards": [
             {
               "name": "OpenRB-150"
