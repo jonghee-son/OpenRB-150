@@ -95,18 +95,22 @@ void OLLO::begin(int devNum){
 	case 1:
 		pinMode(PORT1_SIG1, OUTPUT); //RED  (right)
 		pinMode(PORT1_SIG2, OUTPUT); //BLUE (left)
+		pinMode(PORT1_ADC, INPUT);
 		break;
 	case 2:
 		pinMode(PORT2_SIG1, OUTPUT); //RED  (right)
 		pinMode(PORT2_SIG2, OUTPUT); //BLUE (left)
+		pinMode(PORT2_ADC, INPUT);
 		break;
 	case 3:
 		pinMode(PORT3_SIG1, OUTPUT); //RED  (right)
 		pinMode(PORT3_SIG2, OUTPUT); //BLUE (left)
+		pinMode(PORT3_ADC, INPUT);
 		break;
 	case 4:
 		pinMode(PORT4_SIG1, OUTPUT); //RED  (right)
 		pinMode(PORT4_SIG2, OUTPUT); //BLUE (left)
+		pinMode(PORT4_ADC, INPUT);
 		break;
 	default:
 		break;
@@ -124,8 +128,10 @@ void OLLO::begin(int devNum, OlloDeviceIndex device_index){ //MAGNETIC SENSOR, B
 		if(device_index == TOUCH_SENSOR || device_index == PIR_SENSOR || device_index == MAGNETIC_SENSOR){
 			pinMode(PORT1_ADC, INPUT_PULLUP);
 		}else if(device_index == ULTRASONIC_SENSOR || device_index == COLOR_SENSOR || device_index == TEMPERATURE_SENSOR ){
+			pinMode(PORT1_ADC, INPUT);
 		}
 		else{
+			pinMode(PORT1_ADC, INPUT);
 		}
 
 		pinMode(PORT1_SIG1, OUTPUT); //SIG1
@@ -139,7 +145,9 @@ void OLLO::begin(int devNum, OlloDeviceIndex device_index){ //MAGNETIC SENSOR, B
 		if(device_index == TOUCH_SENSOR || device_index == PIR_SENSOR || device_index == MAGNETIC_SENSOR){
 			pinMode(PORT2_ADC, INPUT_PULLUP);
 		}else if(device_index == ULTRASONIC_SENSOR || device_index == COLOR_SENSOR || device_index == TEMPERATURE_SENSOR ){
+			pinMode(PORT2_ADC, INPUT);
 		}else{
+			pinMode(PORT2_ADC, INPUT);
 		}
 
 		pinMode(PORT2_SIG1, OUTPUT); //SIG1
@@ -153,7 +161,9 @@ void OLLO::begin(int devNum, OlloDeviceIndex device_index){ //MAGNETIC SENSOR, B
 		if(device_index == TOUCH_SENSOR || device_index == PIR_SENSOR || device_index == MAGNETIC_SENSOR){
 			pinMode(PORT3_ADC, INPUT_PULLUP);
 		}else if(device_index == ULTRASONIC_SENSOR || device_index == COLOR_SENSOR || device_index == TEMPERATURE_SENSOR ){
+			pinMode(PORT3_ADC, INPUT);
 		}else{
+			pinMode(PORT3_ADC, INPUT);
 		}
 
 		pinMode(PORT3_SIG1, OUTPUT); //SIG1
@@ -167,7 +177,9 @@ void OLLO::begin(int devNum, OlloDeviceIndex device_index){ //MAGNETIC SENSOR, B
 		if(device_index == TOUCH_SENSOR || device_index == PIR_SENSOR || device_index == MAGNETIC_SENSOR ){
 			pinMode(PORT4_ADC, INPUT_PULLUP);
 		}else if(device_index == ULTRASONIC_SENSOR || device_index == COLOR_SENSOR || device_index == TEMPERATURE_SENSOR ){
+			pinMode(PORT4_ADC, INPUT);
 		}else{
+			pinMode(PORT4_ADC, INPUT);
 		}
 
 		pinMode(PORT4_SIG1, OUTPUT); //SIG1

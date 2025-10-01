@@ -47,19 +47,19 @@ typedef enum COLOR_INDEX {
 
 #define PORT1_SIG1  0
 #define PORT1_SIG2  1
-#define PORT1_ADC   15
+#define PORT1_ADC   A0
 
 #define PORT2_SIG1  2
 #define PORT2_SIG2  3
-#define PORT2_ADC   16
+#define PORT2_ADC   A1
 
 #define PORT3_SIG1  4
 #define PORT3_SIG2  5
-#define PORT3_ADC   17
+#define PORT3_ADC   A2
 
 #define PORT4_SIG1  6
 #define PORT4_SIG2  7
-#define PORT4_ADC   18
+#define PORT4_ADC   A3
 
 
 
