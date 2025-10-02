@@ -101,8 +101,8 @@
           "category": "Contributed",
           "url": "https://github.com/jonghee-son/OpenRB-150/releases/download/0.2.2/OpenRB-150.zip",
           "archiveFileName": "OpenRB-150.zip",
-          "checksum": "SHA-256:562ebe377097219259f5e49b49ba4020019e1cd07aad6877b8c1307da58a1fcd",
-          "size": "803939",
+          "checksum": "SHA-256:7c21b572647cbbb055cf11518bef86bacf791646f856afe91c77cc658b5dda8c",
+          "size": "799955",
           "boards": [
             {
               "name": "OpenRB-150"
