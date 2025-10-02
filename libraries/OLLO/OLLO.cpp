@@ -264,7 +264,7 @@ int OLLO::read(int devNum, OlloDeviceIndex device_index){ // IR SENSOR, Button, 
 	case 1:
 		if(device_index == IR_SENSOR){
 			digitalWrite(PORT1_SIG2, HIGH);
-			delayMicroseconds(25);
+			delayMicroseconds(15);
 			adcValue = analogRead(PORT1_ADC);
 			digitalWrite(PORT1_SIG2, LOW);
 			return adcValue;
@@ -298,7 +298,7 @@ int OLLO::read(int devNum, OlloDeviceIndex device_index){ // IR SENSOR, Button, 
 	case 2:
 		if(device_index == IR_SENSOR){
 			digitalWrite(PORT2_SIG2, HIGH);//digitalWrite(PORT1_SIG2, HIGH); -> digitalWrite(PORT2_SIG2, HIGH); 140324
-			delayMicroseconds(25);
+			delayMicroseconds(15);
 			adcValue = analogRead(PORT2_ADC);//adcValue = analogRead(PORT1_ADC); -> adcValue = analogRead(PORT2_ADC); 140324
 			digitalWrite(PORT2_SIG2, LOW);//digitalWrite(PORT1_SIG2, LOW); -> digitalWrite(PORT2_SIG2, LOW);
 			return adcValue;
@@ -367,7 +367,7 @@ int OLLO::read(int devNum, OlloDeviceIndex device_index){ // IR SENSOR, Button, 
 	case 3:
 		if(device_index == IR_SENSOR){
 			digitalWrite(PORT3_SIG2, HIGH);////digitalWrite(PORT1_SIG2, HIGH); -> digitalWrite(PORT3_SIG2, HIGH); 140324
-			delayMicroseconds(25);
+			delayMicroseconds(15);
 			adcValue = analogRead(PORT3_ADC);//adcValue = analogRead(PORT1_ADC); -> adcValue = analogRead(PORT3_ADC); 140324
 			digitalWrite(PORT3_SIG2, LOW);//digitalWrite(PORT1_SIG2, LOW); -> digitalWrite(PORT3_SIG2, LOW);
 			return adcValue;
@@ -435,7 +435,7 @@ int OLLO::read(int devNum, OlloDeviceIndex device_index){ // IR SENSOR, Button, 
 	case 4:
 		if(device_index == IR_SENSOR){
 			digitalWrite(PORT4_SIG2, HIGH); //digitalWrite(PORT1_SIG2, HIGH); -> digitalWrite(PORT4_SIG2, HIGH); 140324
-			delayMicroseconds(25);
+			delayMicroseconds(15);
 			adcValue = analogRead(PORT4_ADC); //adcValue = analogRead(PORT1_ADC); -> adcValue = analogRead(PORT4_ADC); 140324
 			digitalWrite(PORT4_SIG2, LOW);//digitalWrite(PORT1_SIG2, LOW); -> digitalWrite(PORT4_SIG2, LOW);
 			return adcValue;
